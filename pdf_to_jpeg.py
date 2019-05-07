@@ -3,8 +3,8 @@ import tempfile
 
 from pdf2image import convert_from_path
 
-folder = 'pdf'
-save_dir = 'saved'
+folder = 'pdf' #folder with pdfs. You need to create it manually.
+save_dir = 'saved' #folder dor images. You need to create it manually.
 
 log = open("log.txt", "a")
 
@@ -26,3 +26,9 @@ for r, d, f in os.walk(folder):
             page.save(os.path.join(save_dir, name), 'JPEG')
 
 log.close()
+
+# Script Info
+
+# Break pdf into JPG pictures. Images log would be saved in log.txt. 
+# Python 3
+# pip install pdf2image (library: https://github.com/Belval/pdf2image)
